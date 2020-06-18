@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="jQuery Slideshow">
+		<title>jQuery Slideshow</title>
+		<link rel="stylesheet" href="../slideshow.css" />
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="../slideshow.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var slideshow = new Slideshow({
+					id : 'demo',
+					loop: true
+				});
+			});
+		</script>
+		<style type="text/css">
+			.slideshow .slide figure {
+				margin: 0;
+			}
+
+			.slideshow .slide figure img {
+				width: 100%;
+			}
+
+			@media (min-width: 600px) {
+				.slideshow {
+					width: 50%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Responsive slideshow</h1>
+		<div id="demo" class="slideshow">
+			Slide <span class="slideNumber"></span> of <span class="slidesCount"></span>
+			<div class="wrapper">
+				<span class="next"><img src="../img/next4.png" alt="Next" /></span>
+				<span class="prev"><img src="../img/prev4.png" alt="Previous" /></span>
+				<div class="slides">
+					<div class="slide">
+						<figure>
+							<img src="http://lorempixel.com/640/360/people/4" />
+							<figcaption>lorem ipsum dolor ist</figcaption>
+						</figure>
+					</div>
+					<div class="slide">
+						<figure>
+							<img src="http://lorempixel.com/640/360/people/6" />
+							<figcaption>Lorem Ipsum</figcaption>
+						</figure>
+					</div>
+					<div class="slide">
+						<figure>
+							<img src="http://lorempixel.com/640/360/people/9" />
+							<figcaption>Lorem ipsum dolor ist mutus nomen dedit cocis</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+			<div class="slideTabs"></div>
+		</div>
+	</body>
+</html>
