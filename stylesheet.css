@@ -4,12 +4,22 @@
 }
 /*Rules for the body*/
 body {
-	padding:0px 0px 0px 0px;
-	background-image: url('./resources/background.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
 	font-family:'Anivers_Regular';
 	color:#ccc;
+}
+
+.default-bg{
+	background: #000;
+}
+
+.home-bg{
+	background: url('./resources/home-bg.jpg') no-repeat fixed;
+	background-size: cover;
+}
+
+.contact-bg{
+	background: url('./resources/contact-bg.jpg') no-repeat center fixed;
+	background-size: cover;
 }
 
 /*Includes padding rules for the header display box */
@@ -30,13 +40,15 @@ body {
 	
 }
 
+/*Includes the title and nav-bar as one unit*/
 .header-title-nav-wrapper{
 	display:flex;
 	flex:1 0 67%;
 	align-items:center;
 	justify-content: flex-start;
 }
-.header-title{ /*Includes title and subtitles*/
+
+.header-title{ /*Includes title and subtitle*/
 	flex: 1 1 20%;
 	width: 20%;
 }
