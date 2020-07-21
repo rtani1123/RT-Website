@@ -6,6 +6,8 @@
 body {
 	font-family:'Anivers_Regular';
 	color:#ccc;
+	padding-left: 4vw;
+	padding-right: 4vw;
 }
 
 .default-bg{
@@ -27,8 +29,6 @@ body {
 	position:relative;
 	padding-top: 2vw;
 	padding-bottom: 2vw;
-	padding-left: 4vw;
-	padding-right: 4vw;
 }
 
 /*Includes the title, the navbar menu, and tail */
@@ -103,4 +103,71 @@ body {
 }
 .icon {
 	margin-left: 2.5vw;
+}
+
+/*Body for calendar.html*/
+.calendar-wrapper {
+	display: block;
+	margin: auto;
+	width: 50%;
+}
+
+/*Body for about.html*/
+.about-wrapper {
+	margin-top:6%;
+	display: flex;
+	flex-direction: row;
+}
+
+h3 {
+	font-size: 2vw;
+}
+.about-text {
+	font-size: 1vw;
+	flex: 1;
+}
+
+.about-photo {
+	margin-left:8%;
+	max-width:600px;
+	width:300px;
+	height:auto;
+	flex: 1
+}
+
+/*Gallery Grid*/
+
+/*Media grid display*/
+.media-body{
+	margin-top:6%;
+	align-items: center;
+}
+.grid{
+	display: grid;
+ 	padding: 2em;
+  	counter-reset: grid-items;
+  	position: relative;
+}
+.grid::before {
+	position: absolute;
+	padding-left: 3em;
+	content: attr(data-keyword);
+}
+
+.media-grid-container {
+	grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+}
+.media-grid-item {
+	min-height:500px;
+	width:calc(1.672*height);
+	counter-increment: grid-item;
+}
+
+.media-grid-item::before {
+	content: counter(grid-item);
+}
+
+/*Tail padding*/
+.tail {
+	padding-bottom:2vw;
 }

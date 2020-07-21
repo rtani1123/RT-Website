@@ -19,27 +19,9 @@
         <div class="header-title">
           <a href="home.html" id="site-title">Ryan Tani</a>
           <p id="subtitle">Conductor | Tenor | Educator</p>
-          <script>
-            var title = document.getElementById('site-title');
-            var subtitle = document.getElementById('subtitle');
-            function setFont(text, font) {
-              var size = document.getElementsByClassName("header-display")[0].offsetWidth,
-                font_size = size * font;
-              if (font_size > font * 1000)
-                text.style.fontSize = font_size + '%';
-              else text.style.fontSize = font * 1000 + '%';
-              //console.log('fontsize: ' + text.id + ": " + text.style.fontSize);
-              return this
-            };
-            //So for whatever reason, on launch the offsetWidth is twice as big, but recorrects immediately upon resizing.  Weird.
-            setFont(title, 0.15);
-            setFont(subtitle, 0.08);
-            window.onresize = function () {
-              setFont(title, 0.15);
-              setFont(subtitle, 0.08)
-            }
-          </script>
+          <script src="scripts/resizeLogo.js"></script>
         </div>
+
         <!--Navigation Menu -->
         <div class="header-nav">
           <nav class="header-nav-list">
@@ -62,8 +44,42 @@
       </div>
     </div>
   </div>
-  <p>About will go here</p>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <div class="about-wrapper">
+    <div class="about-text">
+      <h3>BIO</h3>
+      <p>A driven and versatile conductor, Ryan Tani has been praised for his compelling musicianship in a wide range of
+        symphonic and choral repertoire. Ryan currently serves as the Orchestral Conducting Fellow for the Yale
+        Philharmonia, under Music Director Peter Oundjian. He also serves as the Music Director of the Occasional
+        Symphony in Baltimore. In 2015, he was declared the winner of the ACDA Undergraduate Student Conducting
+        Competition at their national conference in Salt Lake City, Utah. </p>
+      <p>An advocate of new and early music, Ryan has stayed active as conductor and performer for new compositions by
+        emerging composers. He is resident conductor of the New Music New Haven series, where he collaborates, under
+        guidance of Aaron Jay Kernis, with Yale University composition students and faculty. During his time at Peabody,
+        he regularly worked to record and perform new works for orchestral, chamber, and choral ensembles. With the
+        Concerto Chamber Orchestra in Los Angeles, he programmed exciting concerts to showcase composers of all levels.
+        He also performed as a tenor with Thornton Edge, a contemporary music ensemble at the University of Southern
+        California and was in demand several times per year as a conductor for student composition recitals. </p>
+
+      <p> Ryan served as Assistant Conductor of the Chesapeake Youth Symphony Orchestra, where he was the principal
+        conductor of the Preparatory Orchestra. He also served as Conducting Fellow for the Montgomery Philharmonic.</p>
+      <p> During his tenure as Co-Founder and Music Director of the Concerto Chamber Orchestra from 2012-2015, Ryan
+        helped positively shape the orchestral scene in the Los Angeles area by providing a medium for high-level
+        performance opportunities to student musicians of all majors. The infrastructure that he and his Board put
+        together thrives to this day. </p>
+      <p> Prior to his conducting study, Ryan worked actively as a tenor in the Los Angeles area. He was in demand as a
+        soloist in several professional early-music and new-music groups, including the USC Thornton Baroque Sinfonia,
+        Horizon Music Group, Tesserae LA, De Angelis, Flos Campi and Thornton Edge, among others. He was also a member
+        of the USC Chamber Singers, which recently received the 2015 American Prize in Choral Music.</p>
+      <p> Ryan is a graduate of the Peabody Institute where he studied conducting with Marin Alsop and Markand Thakar,
+        and of the University of Southern California, where he studied voice with Gary Glaze. In addition to his studies
+        at Peabody, Ryan has also studied conducting with Grant Cooper, José-Luis Novo, Larry Rachleff, Donald
+        Schleicher, and Gerard Schwarz. Ryan remains an active tenor in New Haven, and plays violin, jazz piano, and
+        computer programming for enjoyment. </p>
+    </div>
+    <img class="about-photo"
+      src="resources/bio-pic.jpg">
+  </div>
+  <div class="tail"></div>
 </body>
 
 </html>
