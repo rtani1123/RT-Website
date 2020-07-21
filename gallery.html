@@ -44,8 +44,64 @@
       </div>
     </div>
   </div>
-  <p>Gallery will go here</p>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="node_modules/colcade/colcade.js"></script>
+
+  <div class="gallery-container">
+    <div class="gallery-grid">
+      <div class="gallery-grid-col gallery-grid-col--1"></div>
+      <div class="gallery-grid-col gallery-grid-col--2"></div>
+      <div class="gallery-grid-col gallery-grid-col--3"></div>
+      <div class="gallery-grid-col gallery-grid-col--4"></div>
+
+      <div class="gallery-grid-item">
+        <div class="gallery-content">
+          <h2><a href="https://www.occasionalsymphony.org/previousseasons">Occasional Symphony, Halloween: A Page of Madness, 2018</a></h2>
+        </div>
+        <img src="images/collage1.jpg">
+      </div>
+      <div class="gallery-grid-item">
+        <div class="gallery-content">
+          <h2>Baltimore Concert Opera, Die Fliegende Holländer, 2019</h2>
+        </div>
+        <img src="images/collage2.jpg">
+      </div>
+      <div class="gallery-grid-item">
+        <div class="gallery-content">
+          <h2><a href="https://www.occasionalsymphony.org/previousseasons">Occasional Symphony, Halloween: The Cabinet of Dr. Caligari, 2019</a></h2>
+        </div>
+        <img src="images/contact-bg.jpg">
+      </div>
+      <div class="gallery-grid-item">
+        <div class="gallery-content">
+          <h2><a href="https://www.occasionalsymphony.org/previousseasons">Occasional Symphony, Asian Art Suite, 2018</a></h2>
+        </div>
+        <img src="images/bio-pic.jpg">
+      </div>
+      <div class="gallery-grid-item">
+        <div class="gallery-content">
+          <h2>Eastern Music Festival, 2016</h2>
+        </div>
+        <img src="images/collage3.jpg">
+      </div>
+      <div class="gallery-grid-item">
+        <img src="images/collage5.jpg">
+      </div>
+      <div class="gallery-grid-item">
+        <div class="gallery-content">
+          <h2><a href="https://www.occasionalsymphony.org/previousseasons">Occasional Symphony, Asian Art Suite, 2018</a></h2>
+        </div>
+        <img src="images/collage4.jpg">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // selector string as first argument
+    var colc = new Colcade('.gallery-grid', {
+      columns: '.gallery-grid-col',
+      items: '.gallery-grid-item'
+    });
+  </script>
 </body>
 
 </html>
