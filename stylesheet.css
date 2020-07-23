@@ -109,7 +109,9 @@ body {
     flex: 33%;
     justify-content: flex-end;
     display: flex;
-    line-height: 16px;
+	line-height: 16px;
+	margin-top:auto;
+	margin-bottom:auto;
 }
 
 .icon {
@@ -225,7 +227,74 @@ a {
     content: counter(grid-item);
 }
 
+/*Contact page*/
+.contact-wrapper {
+	max-width:600px;
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 6%;
+	text-align: center;
+
+}
+
+.contact-title{
+	width:600px;
+	margin-left: auto;
+	margin-right: auto;
+	background:rgba(187, 187, 187, 0.5);
+	border-color:transparent;
+	color: rgb(12, 12, 12);
+	text-transform: uppercase;
+	transition: all 4s ease-in-out;
+}
+
+.contact-title h2{
+	font-size: 20px;
+}
+
+form {
+	margin-top: 50px;
+	transition: all 4s ease-in-out;
+}
+
+.form-control{
+	width:600px;
+	background:transparent;
+	border:none;
+	outline:none;
+	border-bottom:1px solid gray;
+	color: #fff;
+	font-size:18px;
+	margin-bottom: 16px;
+}
+
+input {
+	height: 45px;
+	font-family:'Anivers_Regular';
+}
+
+textarea {
+	font-family:'Anivers_Regular';
+}
+
+form .submit{
+	background:rgba(112, 112, 112, 0.5);
+	border-color:transparent;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	height: 50px;
+	margin-top: 20;
+}
+
+form .submit:hover{
+	background-color: rgba(0, 0, 0, 0.719);
+	cursor: pointer;
+}
+
 /*Tail padding*/
 .tail {
-    padding-bottom: 2vw;
+    padding-bottom: 4vw;
 }
