@@ -16,8 +16,8 @@ body {
 }
 
 .home-bg {
-    background: url('./images/home-bg.jpg') no-repeat fixed;
-    background-size: cover;
+    background: url('./images/home-bg.jpg') no-repeat;
+    background-position: top center;
 }
 
 .contact-bg {
