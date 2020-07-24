@@ -1,11 +1,10 @@
 {
   "name": "RT-Website",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "cd backend && npm run build",
-    "start": "concurrently \"npm run server\""
+    "server": "netlify-lambda serve src",
+    "build": "netlify-lambda build src"
   },
   "repository": {
     "type": "git",
@@ -18,7 +17,10 @@
     "url": "https://github.com/rtani1123/RT-Website/issues"
   },
   "homepage": "https://github.com/rtani1123/RT-Website#readme",
-  "devDependencies": {
-    "concurrently": "^5.2.0"
-  }
+  "dependencies": {
+    "express": "^4.17.1",
+    "netlify-lambda": "^2.0.1",
+    "serverless-http": "^2.5.0"
+  },
+  "description": ""
 }
