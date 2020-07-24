@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "cd backend && npm run build"
+    "server": "cd backend && npm run build",
+    "start": "concurrently \"npm run server\""
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/rtani1123/RT-Website/issues"
   },
-  "homepage": "https://github.com/rtani1123/RT-Website#readme"
+  "homepage": "https://github.com/rtani1123/RT-Website#readme",
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
 }
