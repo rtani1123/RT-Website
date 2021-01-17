@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
         'X-Mailer: PHP/' . phpversion();
 
     mail($mailTo, $subject, $message, $headers);
-    header("Location: home.html?mailsend");
+    header("Location: index.html?mailsend");
 ?>
     Thank you for writing! I will be in touch with you very soon.
 <?php
