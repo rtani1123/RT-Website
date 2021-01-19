@@ -149,6 +149,13 @@ body {
     width: 50%;
 }
 
+.repertoire-wrapper {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 40vw;
+}
+
 /*Body for about.html*/
 .about-wrapper {
     margin-top: 6%;
