@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'Anivers_Regular';
+    src: url(resources/Anivers_Regular.otf);
+}
+@mixin siteBG($bgURL) {
+    background: url($bgURL) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    height: 140%;
+}
+body {
+    font-family: 'Anivers_Regular';
+}
+.default-bg {
+    background: #000;
+}
+.home-bg {
+    @include siteBG('./images/home-bg.jpg');
+}
+.contact-bg {
+    @include siteBG('./images/contact-bg.jpg');
+}
+
+.header { /*Includes padding rules for the header display box */
+    position: relative;
+    padding-top: 2vw;
+    padding-bottom:2vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    color: #ccc;
+}
+.header-display { /*Includes the title, the navbar menu, and tail */
+    justify-content: flex-start;
+    display: flex; //creates a flex display for the 3 header elements
+    flex-direction: row;
+}
+.header-title-nav-wrapper { /*Includes the title and nav-bar as one unit*/
+    display: flex; //creates a *new* flex display within the nav wrapper for each menu item
+    flex: 1 0 67%;
+    align-items: center;
+}
+.header-title { /*Includes title and subtitle*/
+    flex: 1 1 20%;
+    width: 20%;
+    
+}
+
+#site-title { /*Includes title only*/
+    text-decoration: none;
+    font-weight: bold;
+    color: #ccc;
+}
+
+#subtitle { /*Subtitle*/
+    float: inherit;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.header-nav {
+    /*navbar menu*/
+    text-align: center;
+    justify-content: flex-end;
+    flex: 1 1 34%;
+    font-weight: 200;
+}
+
+.header-nav-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header-nav-list a {
+    font-size: 20px;
+    margin: 10;
+    color: #ccc;
+    text-decoration: none;
+    -webkit-transition: color 0.3s linear;
+    -moz-transition: color 0.3s linear;
+    -ms-transition: color 0.3s linear;
+    -o-transition: color 0.3s linear;
+    transition: color 0.3s linear;
+}
+
+.header-nav-list a:hover {
+    color: #06F;
+}
+
+.header-nav-list-item {
+    margin-left: .35vw;
+    margin-right: .35vw;
+}
+
+@media all and (max-width: 735px) {
+    .header-display {
+        flex-direction:column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-nav-list-item {
+        width:100%;
+    }
+}
+
+.header-tail {
+    flex: 33%;
+    justify-content: flex-end;
+    display: flex;
+    line-height: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.icon {
+    margin-left: 2.5vw;
+}
+
+.burger{
+    width: 25px;
+    height: 5px;
+    background-color: white;
+    margin: 5px;
+}
