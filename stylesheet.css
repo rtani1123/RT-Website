@@ -231,25 +231,18 @@ a {
 
 /*Media grid display*/
 .media-body {
-    margin-top: 6%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-
-.media-grid-container {
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(auto-fit, 560px);
+    position: relative;
+    padding-top:2%;
+    align-items: center;
     justify-content: center;
 }
 
-.media-grid-item {
-    justify-self: center;
+.video {
+    display:block; 
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
 }
-
 /*Contact page*/
 .contact-wrapper {
     max-width: 600px;
