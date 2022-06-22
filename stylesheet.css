@@ -155,6 +155,11 @@ body {
      object-fit: contain;
 }
 
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span{
+  background: white;
+}
+
 .fp-watermark a {
   font-size: 0.75vw;
 }
