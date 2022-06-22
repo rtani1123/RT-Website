@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(resources/Montserrat-VariableFont_wght.ttf);
+}
+
+/*Rules for the body*/
+body {
+    font-family: 'Montserrat';
+    background-color: #363537;
+    color: #D0CCD0;
+}
+
+#about{
+    background-size:cover;
+    #about-photo{
+        display:block;
+        width:35vw;
+        left:50%;
+        position:relative;
+        animation: image-from-right 3s 1;
+    }
+    #about-text{
+        background-color: #363537;
+        border-radius:5px;
+        z-index: 1000;
+        text-align:center;
+        position:absolute;
+        top:70%;
+        left:20%;
+        letter-spacing: 8px;
+        font-size:3vw;
+        font-weight:700;
+        animation: text-from-left 3s 1;
+    }
+}
+@keyframes image-from-right {
+    0%{
+      color: black;
+      margin-left:100vw;
+    }
+}
+  
+@keyframes text-from-left {
+    0%{
+        color: black;
+        margin-left:-100vw;
+    }
+    30%{
+        letter-spacing:25px;
+    }
+    85%{
+        letter-spacing: 8px;
+    }
+}
+
+#media-section-wrapper{
+    #media-wrapper{
+        display:flex;
+        flex-direction:row;
+        width:80%;
+        height:74%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        #media-video {
+            background-color:black;
+            width:100%;
+            height:100%;
+            flex: 3;
+            iframe{
+                width:100%;
+                height:100%;
+            }
+        }
+        #media-nav{
+            background-color:#D0CCD0;
+            flex: 1;
+            p{
+                color:black;
+                text-align: center;
+                margin-left:5px;
+                font-size:calc(min(2vw,16px));
+                font-weight:700;
+            }
+            button{
+                width:100%;
+                text-align:center;
+                font-size:100%;
+                font-size:calc(min(2vw,16px));
+                font-family:'Montserrat';
+                border:none;
+                background:none;
+                text-decoration: none;
+                -webkit-transition: color 0.3s linear;
+                -moz-transition: color 0.3s linear;
+                -ms-transition: color 0.3s linear;
+                -o-transition: color 0.3s linear;
+                transition: color 0.3s linear;
+            }
+            button:nth-of-type(2n){
+                background:#FBFCFF;
+            }
+            button:hover{
+                color: #06F;
+                cursor:pointer;
+            }
+        }
+    }
+}
+
+#gallery{
+    img{
+        height:80%;
+        margin-top:10vh;
+        margin-bottom:40px;
+        vertical-align: middle;
+        object-fit: contain;
+    }
+}
+
+.fp-watermark {
+    a{
+        font-size:0.75vw;
+    }
+    a:before{
+        font-size:0.75vw;
+        content:'Site designed by Ryan Tani, ';
+    }
+}

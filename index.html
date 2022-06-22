@@ -1,56 +1,104 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <meta name="title" content="Ryan Tani, Conductor">
   <meta name="description" content="Ryan Tani, Conductor">
   <meta name="author" content="Ryan Tani">
   <title>Ryan Tani, Conductor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.css"
+    integrity="sha512-Go0fX6Al6Eab+N7QbSFHYBpwdcU2rbfONUcbRIS4z+9yzLlj7Xj8ao2BAOPE9Qtxdl+7iq04xzzcF4OTOWoUWg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
-<body class="home-bg">
-  <div class="header" style="background:none;">
-    <!--defines header box padding-->
-    <div class="header-display">
-      <!--includes title, nav, tail-->
-      <div class="header-title-nav-wrapper">
-        <!--includes title, nav. title-left, nav-right -->
-        <div class="header-title">
-          <a href="/" id="site-title">Ryan Tani</a>
-          <p id="subtitle">Conductor | Tenor | Educator</p>
-          <script src="scripts/resizeLogo.js"></script>
-        </div>
+<body>
+  <div id="home">
+    <!--This content below is the ABOUT section-->
+    <div id="about" class="section">
+      <div id="about-text">
+        ryan tani, conductor
+      </div>
+      <img src="images/bio-pic2.jpg" id="about-photo"></img>
+    </div>
 
-        <!--Navigation Menu -->
-        <div class="header-nav">
-          <nav class="header-nav-list">
-            <div class="header-nav-list-item"><a href="/">HOME</a></div>
-            <!-- <div class="header-nav-list-item"><a href="news">NEWS</a></div> -->
-            <div class="header-nav-list-item"><a href="about">ABOUT</a></div>
-            <div class="header-nav-list-item"><a href="gallery">GALLERY</a></div>
-            <div class="header-nav-list-item"><a href="media">MEDIA</a></div>
-            <div class="header-nav-list-item"><a href="contact">CONTACT</a></div>
-          </nav>
+    <!--This section below is MEDIA-->
+    <div class="section">
+      <div id="media-section-wrapper">
+        <div id="media-wrapper">
+          <div id="media-video">
+            <iframe id="player" src="https://www.youtube.com/embed/PvTXdejUDCg?rel=0&enablejsapi=1"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div id="media-nav">
+            <script src="http://www.youtube.com/player_api"></script>
+            <p>Click Below to Navigate Sections</p>
+            <button onclick="seek(0)">Prokofiev: Classical Symphony Gavotte</button>
+            <button onclick="seek(56)">Prokofiev: Classical Symphony Finale</button>
+            <button onclick="seek(145)">Bizet/arr. Shchedrin: Carmen Suite - II. Tanz</button>
+            <button onclick="seek(191)">Bizet, arr. Shchedrin: Carmen Suite, XI. Adagio</button>
+            <button onclick="seek(341)">Jessie Montgomery: Starburst</button>
+            <button onclick="seek(378)">Joel Thompson: La Lluvia</button>
+            <button onclick="seek(537)">Rachmaninoff: Symphony No. 2, III. Adagio</button>
+            <button onclick="seek(594)">Bartók: Divertimento, I. Allegro non troppo</button>
+            <button onclick="seek(726)">Beethoven: Overture to "Egmont"</button>
+          </div>
         </div>
       </div>
-      <div class="header-tail">
-        <a class="icon" href="http://instagram.com/ryt_music">
-          <img src="resources/ig_icon_20.png">
-        </a>
-        <a class="icon" href="https://www.youtube.com/user/Littlebrother1123/videos">
-          <img src="resources/yt_icon_20.png">
-        </a>
+    </div>
+
+    <!--This content below is the GALLERY-->
+    <div class="section">
+      <div id="gallery">
+        <img class="slide" src="images/collage1.jpg">
+        <img class="slide" src="images/collage2.jpg">
+        <img class="slide" src="images/contact-bg.jpg">
+        <img class="slide" src="images/bio-pic.jpg">
+        <img class="slide" src="images/collage3.jpg">
+        <img class="slide" src="images/collage5.jpg">
+        <img class="slide" src="images/collage4.jpg">
       </div>
-      <!--
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>-->
     </div>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"
+    integrity="sha512-JSVRnP8UFs0ieN/cvP9v4vmW1CotIaEKKN7W+4JaKNrllZolTv2aJfVGn4BFdfZ1jRZxgTAAaXWdlZbEm9iwFA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    new fullpage('#home', {
+      autoScrolling: true,
+      anchors: ['firstPage', 'secondPage', '3rdPage'],
+      navigationTooltips: ['First page', 'Second page', 'Third and last page'],
+      navigation: true,
+      navigationPosition: 'right',
+    })
+
+    var player, seconds = 0;
+    function onYouTubeIframeAPIReady() {
+      console.log("player");
+      player = new YT.Player('player', {
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      //event.target.playVideo();
+    }
+
+
+    function seek(sec) {
+      if (player) {
+        player.seekTo(sec, true);
+        player.playVideo();
+      }
+    }
+  </script>
 </body>
 
 </html>
