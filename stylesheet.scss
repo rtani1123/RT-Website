@@ -10,63 +10,71 @@ body {
     color: #D0CCD0;
 }
 
-.nav{
-    position:absolute;
-    top:30%;
-    left:10%;
-    .nav-item {
-        font-size:2vw;
-        a{
-            color: #ccc;
-            text-decoration: none;
-            -webkit-transition: color 0.3s linear;
-            -moz-transition: color 0.3s linear;
-            -ms-transition: color 0.3s linear;
-            -o-transition: color 0.3s linear;
-            transition: color 0.3s linear;
-            animation: nav-animation 5s 1;
-        }
-        a:hover{
-            color: #06F;
-        }
-        @keyframes nav-animation {
-            0%{
-                color:#363537;
+#mainpage{
+    .fp-arrow {
+        visibility:hidden; /*hide fullpage slide arrows here only; not on gallery*/
+    }
+    /* Style for navigation 'bar' */
+    .nav{
+        position:absolute;
+        top:30%;
+        left:10%;
+        .nav-item {
+            font-size:2vw;
+            a{
+                color: #ccc;
+                text-decoration: none;
+                -webkit-transition: color 0.3s linear;
+                -moz-transition: color 0.3s linear;
+                -ms-transition: color 0.3s linear;
+                -o-transition: color 0.3s linear;
+                transition: color 0.3s linear;
+                animation: nav-animation 5s 1;
             }
-            50%{
-                color:#363537;
+            a:hover{
+                color: #06F;
             }
+            @keyframes nav-animation {
+                0%{
+                    color:#363537;
+                }
+                50%{
+                    color:#363537;
+                }
+            }
+        }
+        
+    }
+    
+    #about{
+        background-size:cover;
+        #about-name{
+            background-color: #363537;
+            border-radius:5px;
+            z-index: 1000;
+            text-align:center;
+            position:absolute;
+            top:70%;
+            left:10%;
+            letter-spacing: 8px;
+            font-size:3vw;
+            font-weight:700;
+            animation: text-from-left 3s 1;
+        }
+        /*Currently the photo starts at 50% into the page from the left.  How do I stop this for mobile?
+        If it's mobile, how do I set the value of left to 100%?  Perhaps if(total width of page < 500) or sim?
+        That way I can also control how the text reacts as well as the 'nav' bar section.
+        */
+        #about-photo{
+            display:block;
+            width:35vw;
+            left:45%;
+            position:relative;
+            animation: image-from-right 3s 1;
         }
     }
 }
 
-#about{
-    background-size:cover;
-    #about-name{
-        background-color: #363537;
-        border-radius:5px;
-        z-index: 1000;
-        text-align:center;
-        position:absolute;
-        top:70%;
-        left:10%;
-        letter-spacing: 8px;
-        font-size:3vw;
-        font-weight:700;
-        animation: text-from-left 3s 1;
-    }
-    /*Currently the photo starts at 50% into the page from the left.  How do I stop this for mobile?
-    If it's mobile, how do I set the value of left to 100%?  Perhaps if(total width of page < 500) or sim?
-    That way I can also control how the text reacts as well as the 'nav' bar section.
-    */
-    #about-photo{
-        display:block;
-        width:35vw;
-        left:45%;
-        position:relative;
-        animation: image-from-right 3s 1;
-    }
-}
 
 @keyframes image-from-right {
     0%{
@@ -152,8 +160,10 @@ body {
         vertical-align: middle;
         object-fit: contain;
     }
+    .fp-arrow {
+        padding-left:100px;
+    }
 }
-
 #bio-wrapper{
     margin:50px;
     #bio-nav a{
@@ -196,6 +206,6 @@ body {
         content:'Site designed by Ryan Tani, ';
     }
 }
-.fp-arrow {
-    visibility:hidden;
-}
+
+
+

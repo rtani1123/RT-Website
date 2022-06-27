@@ -10,17 +10,26 @@ body {
   color: #D0CCD0;
 }
 
-.nav {
+#mainpage {
+  /* Style for navigation 'bar' */
+}
+
+#mainpage .fp-arrow {
+  visibility: hidden;
+  /*hide fullpage slide arrows here only; not on gallery*/
+}
+
+#mainpage .nav {
   position: absolute;
   top: 30%;
   left: 10%;
 }
 
-.nav .nav-item {
+#mainpage .nav .nav-item {
   font-size: 2vw;
 }
 
-.nav .nav-item a {
+#mainpage .nav .nav-item a {
   color: #ccc;
   text-decoration: none;
   -webkit-transition: color 0.3s linear;
@@ -29,7 +38,7 @@ body {
           animation: nav-animation 5s 1;
 }
 
-.nav .nav-item a:hover {
+#mainpage .nav .nav-item a:hover {
   color: #06F;
 }
 
@@ -51,15 +60,15 @@ body {
   }
 }
 
-#about {
+#mainpage #about {
   background-size: cover;
   /*Currently the photo starts at 50% into the page from the left.  How do I stop this for mobile?
-    If it's mobile, how do I set the value of left to 100%?  Perhaps if(total width of page < 500) or sim?
-    That way I can also control how the text reacts as well as the 'nav' bar section.
-    */
+        If it's mobile, how do I set the value of left to 100%?  Perhaps if(total width of page < 500) or sim?
+        That way I can also control how the text reacts as well as the 'nav' bar section.
+        */
 }
 
-#about #about-name {
+#mainpage #about #about-name {
   background-color: #363537;
   border-radius: 5px;
   z-index: 1000;
@@ -74,7 +83,7 @@ body {
           animation: text-from-left 3s 1;
 }
 
-#about #about-photo {
+#mainpage #about #about-photo {
   display: block;
   width: 35vw;
   left: 45%;
@@ -200,6 +209,10 @@ body {
      object-fit: contain;
 }
 
+#gallery .fp-arrow {
+  padding-left: 100px;
+}
+
 #bio-wrapper {
   margin: 50px;
 }
@@ -242,9 +255,5 @@ body {
 .fp-watermark a:before {
   font-size: 0.75vw;
   content: 'Site designed by Ryan Tani, ';
-}
-
-.fp-arrow {
-  visibility: hidden;
 }
 /*# sourceMappingURL=stylesheet.css.map */
