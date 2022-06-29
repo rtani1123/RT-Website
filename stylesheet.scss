@@ -10,7 +10,7 @@ body {
     color: #D0CCD0;
 }
 
-#mainpage{
+#mainpage-section{
     .fp-arrow {
         visibility:hidden; /*hide fullpage slide arrows here only; not on gallery*/
     }
@@ -47,7 +47,7 @@ body {
         
     }
     
-    #about{
+    #about-section{
         background-size:cover;
         #about-name{
             background-color: #363537;
@@ -97,7 +97,7 @@ body {
     }
 }
 
-#media-section-wrapper{
+#media-section{
     #media-wrapper{
         display:flex;
         flex-direction:row;
@@ -153,7 +153,7 @@ body {
     }
 }
 
-#gallery{
+#gallery-section{
     img{
         height:80%;
         margin-top:10vh;
@@ -165,7 +165,7 @@ body {
         padding-left:100px;
     }
 }
-#bio-wrapper{
+#bio-slide{
     margin:50px;
     #bio-nav a{
         color:#ccc;
@@ -190,6 +190,58 @@ body {
     }
     #bio-text{
         text-align: justify;
+    }
+}
+
+#repertoire-section{
+    display:block;
+    margin-top:30px;
+    height:100%;
+    width:100%;
+    padding:0;
+    .accordion{
+        background-color: #444;
+        color: #ccc;
+        cursor: pointer;
+        font-family:'Montserrat';
+        width:100%;
+        margin-bottom:3px;
+        border:none;
+        outline:none;
+        height:10%;
+        transition: 0.4s;
+    }
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .accordion:hover {
+        background-color: rgb(101, 101, 101);
+    }
+    .repertoire-list{
+        background-color: #363537;
+        display: none;
+        overflow: hidden;
+        ul{
+            columns:2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+            column-gap: 0;
+            width:100%;
+        }
+        li{
+            text-align:left;
+            list-style:none;
+            a{
+                color: #E75A7C;
+                text-decoration: none;
+                -webkit-transition: color 0.5s linear;
+                -moz-transition: color 0.5s linear;
+                -ms-transition: color 0.5s linear;
+                -o-transition: color 0.5s linear;
+                transition: color 0.5s linear;
+            }
+            a:hover{
+                color: #06F;
+            }
+        }
     }
 }
 

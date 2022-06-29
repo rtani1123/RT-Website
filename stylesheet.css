@@ -10,27 +10,27 @@ body {
   color: #D0CCD0;
 }
 
-#mainpage {
+#mainpage-section {
   /* Style for navigation 'bar' */
 }
 
-#mainpage .fp-arrow {
+#mainpage-section .fp-arrow {
   visibility: hidden;
   /*hide fullpage slide arrows here only; not on gallery*/
 }
 
-#mainpage .nav {
+#mainpage-section .nav {
   position: absolute;
   top: 30%;
   left: 10%;
 }
 
-#mainpage .nav .nav-item {
+#mainpage-section .nav .nav-item {
   cursor: pointer;
   font-size: 2vw;
 }
 
-#mainpage .nav .nav-item a {
+#mainpage-section .nav .nav-item a {
   color: #ccc;
   text-decoration: none;
   -webkit-transition: color 0.5s linear;
@@ -39,7 +39,7 @@ body {
           animation: nav-animation 5s 1;
 }
 
-#mainpage .nav .nav-item a:hover {
+#mainpage-section .nav .nav-item a:hover {
   color: #06F;
 }
 
@@ -61,7 +61,7 @@ body {
   }
 }
 
-#mainpage #about {
+#mainpage-section #about-section {
   background-size: cover;
   /*Currently the photo starts at 50% into the page from the left.  How do I stop this for mobile?
         If it's mobile, how do I set the value of left to 100%?  Perhaps if(total width of page < 500) or sim?
@@ -69,7 +69,7 @@ body {
         */
 }
 
-#mainpage #about #about-name {
+#mainpage-section #about-section #about-name {
   background-color: #363537;
   border-radius: 5px;
   z-index: 1000;
@@ -84,7 +84,7 @@ body {
           animation: text-from-left 3s 1;
 }
 
-#mainpage #about #about-photo {
+#mainpage-section #about-section #about-photo {
   display: block;
   width: 35vw;
   left: 45%;
@@ -133,7 +133,7 @@ body {
   }
 }
 
-#media-section-wrapper #media-wrapper {
+#media-section #media-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,7 +150,7 @@ body {
           transform: translate(-50%, -50%);
 }
 
-#media-section-wrapper #media-wrapper #media-video {
+#media-section #media-wrapper #media-video {
   background-color: black;
   width: 100%;
   height: 100%;
@@ -159,19 +159,19 @@ body {
           flex: 3;
 }
 
-#media-section-wrapper #media-wrapper #media-video iframe {
+#media-section #media-wrapper #media-video iframe {
   width: 100%;
   height: 100%;
 }
 
-#media-section-wrapper #media-wrapper #media-nav {
+#media-section #media-wrapper #media-nav {
   background-color: #D0CCD0;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-#media-section-wrapper #media-wrapper #media-nav p {
+#media-section #media-wrapper #media-nav p {
   color: black;
   text-align: center;
   margin-left: 5px;
@@ -179,7 +179,7 @@ body {
   font-weight: 700;
 }
 
-#media-section-wrapper #media-wrapper #media-nav button {
+#media-section #media-wrapper #media-nav button {
   width: 100%;
   text-align: center;
   font-size: 100%;
@@ -192,16 +192,16 @@ body {
   transition: color 0.3s linear;
 }
 
-#media-section-wrapper #media-wrapper #media-nav button:nth-of-type(2n) {
+#media-section #media-wrapper #media-nav button:nth-of-type(2n) {
   background: #FBFCFF;
 }
 
-#media-section-wrapper #media-wrapper #media-nav button:hover {
+#media-section #media-wrapper #media-nav button:hover {
   color: #06F;
   cursor: pointer;
 }
 
-#gallery img {
+#gallery-section img {
   height: 80%;
   margin-top: 10vh;
   margin-bottom: 40px;
@@ -210,38 +210,96 @@ body {
      object-fit: contain;
 }
 
-#gallery .fp-arrow {
+#gallery-section .fp-arrow {
   padding-left: 100px;
 }
 
-#bio-wrapper {
+#bio-slide {
   margin: 50px;
 }
 
-#bio-wrapper #bio-nav a {
+#bio-slide #bio-nav a {
   color: #ccc;
   text-decoration: none;
   -webkit-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
 
-#bio-wrapper #bio-nav a:hover {
+#bio-slide #bio-nav a:hover {
   color: #06F;
   cursor: pointer;
 }
 
-#bio-wrapper #bio-photo {
+#bio-slide #bio-photo {
   padding-right: 15px;
   float: left;
   width: 50%;
 }
 
-#bio-wrapper #bio-photo img {
+#bio-slide #bio-photo img {
   width: 100%;
 }
 
-#bio-wrapper #bio-text {
+#bio-slide #bio-text {
   text-align: justify;
+}
+
+#repertoire-section {
+  display: block;
+  margin-top: 30px;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+}
+
+#repertoire-section .accordion {
+  background-color: #444;
+  color: #ccc;
+  cursor: pointer;
+  font-family: 'Montserrat';
+  width: 100%;
+  margin-bottom: 3px;
+  border: none;
+  outline: none;
+  height: 10%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#repertoire-section .active, #repertoire-section .accordion:hover {
+  background-color: #656565;
+}
+
+#repertoire-section .repertoire-list {
+  background-color: #363537;
+  display: none;
+  overflow: hidden;
+}
+
+#repertoire-section .repertoire-list ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  -webkit-column-gap: 0;
+          column-gap: 0;
+  width: 100%;
+}
+
+#repertoire-section .repertoire-list li {
+  text-align: left;
+  list-style: none;
+}
+
+#repertoire-section .repertoire-list li a {
+  color: #E75A7C;
+  text-decoration: none;
+  -webkit-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+}
+
+#repertoire-section .repertoire-list li a:hover {
+  color: #06F;
 }
 
 #fp-nav ul li a span,
