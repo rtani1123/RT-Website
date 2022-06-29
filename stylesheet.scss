@@ -10,6 +10,7 @@ body {
     color: #D0CCD0;
 }
 
+/* Styles for mainpage (including nav bar, about, and bio slides) */
 #mainpage-section{
     .fp-arrow {
         visibility:hidden; /*hide fullpage slide arrows here only; not on gallery*/
@@ -81,10 +82,15 @@ body {
             padding:5px;
             animation: text-from-left 3s 1;
         }
-        /*Currently the photo starts at 50% into the page from the left.  How do I stop this for mobile?
-        If it's mobile, how do I set the value of left to 100%?  Perhaps if(total width of page < 500) or sim?
-        That way I can also control how the text reacts as well as the 'nav' bar section.
-        */
+        @keyframes text-from-left {
+            0%{
+                color: black;
+                left:-100vw;
+            }
+            30%{
+                letter-spacing:0px;
+            }
+        }
         #about-photo{
             display:block;
             height:100vh;
@@ -93,6 +99,12 @@ body {
             margin-right:auto;
             background-attachment: fixed;
             animation: image-from-right 3s 1;
+        }
+        @keyframes image-from-right {
+            0%{
+              color: black;
+              padding-left:100vw;
+            }
         }
         @media only screen and (min-width: 1100px) {
             /* For mobile phones: */
@@ -113,26 +125,37 @@ body {
             }
         }
     }
-}
 
-
-@keyframes image-from-right {
-    0%{
-      color: black;
-      padding-left:100vw;
+    #bio-slide{
+        margin:50px;
+        #bio-nav a{
+            color:#ccc;
+            text-decoration: none;
+            -webkit-transition: color 0.3s linear;
+            -moz-transition: color 0.3s linear;
+            -ms-transition: color 0.3s linear;
+            -o-transition: color 0.3s linear;
+            transition: color 0.3s linear;
+        }
+        #bio-nav a:hover{
+            color: #06F;
+            cursor:pointer;
+        }
+        #bio-photo {
+            padding-right:15px;
+            float:left;
+            width: 50%;
+            img{
+                width:100%;
+            }
+        }
+        #bio-text{
+            text-align: justify;
+        }
     }
 }
-  
-@keyframes text-from-left {
-    0%{
-        color: black;
-        left:-100vw;
-    }
-    30%{
-        letter-spacing:0px;
-    }
-}
 
+/* Styles for media page (2nd page on fullpage.js) */
 #media-section{
     #media-wrapper{
         display:flex;
@@ -219,6 +242,7 @@ body {
     
 }
 
+/* Styles for gallery page (3rd page on fullpage.js) */
 #gallery-section{
     img{
         height:80%;
@@ -243,34 +267,8 @@ body {
         }
     }
 }
-#bio-slide{
-    margin:50px;
-    #bio-nav a{
-        color:#ccc;
-        text-decoration: none;
-        -webkit-transition: color 0.3s linear;
-        -moz-transition: color 0.3s linear;
-        -ms-transition: color 0.3s linear;
-        -o-transition: color 0.3s linear;
-        transition: color 0.3s linear;
-    }
-    #bio-nav a:hover{
-        color: #06F;
-        cursor:pointer;
-    }
-    #bio-photo {
-        padding-right:15px;
-        float:left;
-        width: 50%;
-        img{
-            width:100%;
-        }
-    }
-    #bio-text{
-        text-align: justify;
-    }
-}
 
+/* Styles for repertoire page (4th page on fullpage.js) */
 #repertoire-section{
     display:block;
     margin:20px;
@@ -349,22 +347,18 @@ body {
     }
 }
 
-
-#fp-nav ul li a span, 
-.fp-slidesNav ul li a span{
+/* fullpage.js - navigation bar on the right - set dots as white */
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
   background: white;
   color:white;
 }
 
-
 .fp-watermark {
-    a{
-        font-size:0.75vw;
-    }
-    a:before{
-        font-size:0.75vw;
-        content:'Site designed by Ryan Tani, ';
-    }
+    visibility:hidden;
+}
+
+#feedly-mini{
+    visibility:hidden;
 }
 
 

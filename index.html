@@ -360,6 +360,7 @@
         </script>
 
       <script>
+        //fullpage.js initialization for the id 'home-wrapper' at the top
         new fullpage('#home-wrapper', {
           autoScrolling: true,
           anchors: ['home', 'video', 'photo-gallery', 'repertoire-page'],
@@ -368,16 +369,14 @@
           navigationPosition: 'right',
         })
 
+        //initialize YouTube player with JS API
         var player, seconds = 0;
         function onYouTubeIframeAPIReady() {
           console.log("player");
           player = new YT.Player('player', {});
         }
 
-        function onPlayerReady(event) {
-          //event.target.playVideo();
-        }
-
+        //create function to seek to timestamp
         function seek(sec) {
           if (player) {
             player.seekTo(sec, true);
