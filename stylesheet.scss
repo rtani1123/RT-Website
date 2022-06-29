@@ -85,12 +85,20 @@ body {
             margin-left:auto;
             padding-left:40vw;
             margin-right:auto;
+            background-attachment: fixed;
             animation: image-from-right 3s 1;
+        }
+        @media only screen and (max-width: 884px) {
+            #about-photo{
+                max-width:100%;
+            }
         }
         @media only screen and (max-width: 650px) {
             /* For mobile phones: */
             #about-photo{
                 padding-left:0;
+                max-width:100%;
+                height:auto;
             }
             #about-name{
                 letter-spacing:0px;
