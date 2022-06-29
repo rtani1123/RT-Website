@@ -20,15 +20,16 @@ body {
         top:30%;
         left:10%;
         .nav-item {
+            cursor: pointer;
             font-size:2vw;
             a{
                 color: #ccc;
                 text-decoration: none;
-                -webkit-transition: color 0.3s linear;
-                -moz-transition: color 0.3s linear;
-                -ms-transition: color 0.3s linear;
-                -o-transition: color 0.3s linear;
-                transition: color 0.3s linear;
+                -webkit-transition: color 0.5s linear;
+                -moz-transition: color 0.5s linear;
+                -ms-transition: color 0.5s linear;
+                -o-transition: color 0.5s linear;
+                transition: color 0.5s linear;
                 animation: nav-animation 5s 1;
             }
             a:hover{

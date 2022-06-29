@@ -26,14 +26,15 @@ body {
 }
 
 #mainpage .nav .nav-item {
+  cursor: pointer;
   font-size: 2vw;
 }
 
 #mainpage .nav .nav-item a {
   color: #ccc;
   text-decoration: none;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
+  -webkit-transition: color 0.5s linear;
+  transition: color 0.5s linear;
   -webkit-animation: nav-animation 5s 1;
           animation: nav-animation 5s 1;
 }

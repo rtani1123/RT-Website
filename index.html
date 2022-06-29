@@ -10,7 +10,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.css"
     integrity="sha512-Go0fX6Al6Eab+N7QbSFHYBpwdcU2rbfONUcbRIS4z+9yzLlj7Xj8ao2BAOPE9Qtxdl+7iq04xzzcF4OTOWoUWg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="scripts/lity-2.4.1/dist/lity.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script src="scripts/lity-2.4.1/dist/lity.min.js"></script>
 </head>
 
 <body>
@@ -22,6 +25,7 @@
           <div class="nav-item"><a href="#home/1">bio</a></div>
           <div class="nav-item"><a href="#video">video</a></div>
           <div class="nav-item"><a href="#photo-gallery">gallery</a></div>
+          <div class="nav-item"><a src="resources/resume-042722.pdf" data-lity>resume</a></div>
         </div>
 
         <!--This content below is the ABOUT section-->
@@ -121,6 +125,18 @@
         <img class="slide" src="images/collage4.jpg">
       </div>
     </div>
+
+    <div class="section">
+      <div id="repertoire">
+        <a href="https://www.youtube.com/embed/Ay2jH6TaDmI" data-lity>
+          Play
+        </a>
+        <ul class="repertoire-list">
+
+        </ul>
+
+      </div>
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"
@@ -130,8 +146,8 @@
   <script>
     new fullpage('#home-wrapper', {
       autoScrolling: true,
-      anchors: ['home', 'video', 'photo-gallery'],
-      navigationTooltips: ['Home', 'Video', 'Gallery'],
+      anchors: ['home', 'video', 'photo-gallery', 'repertoire-page'],
+      navigationTooltips: ['Home', 'Video', 'Gallery', 'Repertoire'],
       navigation: true,
       navigationPosition: 'right',
     })
@@ -139,11 +155,7 @@
     var player, seconds = 0;
     function onYouTubeIframeAPIReady() {
       console.log("player");
-      player = new YT.Player('player', {
-        events: {
-          'onReady': onPlayerReady
-        }
-      });
+      player = new YT.Player('player', {});
     }
 
     function onPlayerReady(event) {
