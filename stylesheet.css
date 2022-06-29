@@ -23,11 +23,16 @@ body {
   position: absolute;
   top: 30%;
   left: 10%;
+  background: #363537;
+  border: #363537;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 2;
 }
 
 #mainpage-section .nav .nav-item {
   cursor: pointer;
-  font-size: 2vw;
+  font-size: 24px;
 }
 
 #mainpage-section .nav .nav-item a {
@@ -61,8 +66,18 @@ body {
   }
 }
 
+@media only screen and (max-width: 650px) {
+  #mainpage-section {
+    /* For mobile phones: */
+  }
+  #mainpage-section .nav {
+    left: 5%;
+  }
+}
+
 #mainpage-section #about-section {
   background-size: cover;
+  z-index: 1;
   /*Currently the photo starts at 50% into the page from the left.  How do I stop this for mobile?
         If it's mobile, how do I set the value of left to 100%?  Perhaps if(total width of page < 500) or sim?
         That way I can also control how the text reacts as well as the 'nav' bar section.
@@ -78,58 +93,67 @@ body {
   top: 70%;
   left: 10%;
   letter-spacing: 8px;
-  font-size: 3vw;
+  font-size: 36px;
   font-weight: 700;
+  padding: 5px;
   -webkit-animation: text-from-left 3s 1;
           animation: text-from-left 3s 1;
 }
 
 #mainpage-section #about-section #about-photo {
   display: block;
-  width: 35vw;
-  left: 45%;
-  position: relative;
+  height: 100vh;
+  margin-left: auto;
+  padding-left: 40vw;
+  margin-right: auto;
   -webkit-animation: image-from-right 3s 1;
           animation: image-from-right 3s 1;
+}
+
+@media only screen and (max-width: 650px) {
+  #mainpage-section #about-section {
+    /* For mobile phones: */
+  }
+  #mainpage-section #about-section #about-photo {
+    padding-left: 0;
+  }
+  #mainpage-section #about-section #about-name {
+    letter-spacing: 0px;
+    font-size: 24px;
+  }
 }
 
 @-webkit-keyframes image-from-right {
   0% {
     color: black;
-    margin-left: 100vw;
+    padding-left: 100vw;
   }
 }
 
 @keyframes image-from-right {
   0% {
     color: black;
-    margin-left: 100vw;
+    padding-left: 100vw;
   }
 }
 
 @-webkit-keyframes text-from-left {
   0% {
     color: black;
-    margin-left: -100vw;
+    left: -100vw;
   }
   30% {
-    letter-spacing: 25px;
-  }
-  85% {
-    letter-spacing: 8px;
+    letter-spacing: 0px;
   }
 }
 
 @keyframes text-from-left {
   0% {
     color: black;
-    margin-left: -100vw;
+    left: -100vw;
   }
   30% {
-    letter-spacing: 25px;
-  }
-  85% {
-    letter-spacing: 8px;
+    letter-spacing: 0px;
   }
 }
 
