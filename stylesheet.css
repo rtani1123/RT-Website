@@ -334,6 +334,7 @@ body {
   height: 100%;
   width: auto;
   padding: 0;
+  overflow: scroll;
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 }
 
@@ -358,7 +359,6 @@ body {
 #repertoire-section .repertoire-list {
   background-color: #363537;
   display: none;
-  overflow: hidden;
   margin: 0;
 }
 

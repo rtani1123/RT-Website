@@ -272,6 +272,7 @@ body {
     height:100%;
     width:auto;
     padding:0;
+    overflow:scroll;
     .accordion{
         background-color: #444;
         color: #ccc;
@@ -291,7 +292,6 @@ body {
     .repertoire-list{
         background-color: #363537;
         display: none;
-        overflow: hidden;
         margin:0;
         ul{
             columns:2;
