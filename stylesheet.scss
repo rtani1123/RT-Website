@@ -171,7 +171,7 @@ body {
                 -o-transition: color 0.3s linear;
                 transition: color 0.3s linear;
             }
-            button:nth-of-type(2n){
+            button:nth-of-type(2n-1){
                 background:#FBFCFF;
             }
             button:hover{
@@ -179,7 +179,15 @@ body {
                 cursor:pointer;
             }
         }
+        
     }
+    @media only screen and (max-width: 800px) {
+        /* For mobile phones: */
+        #media-wrapper{
+            flex-direction:column;
+        }
+    }
+    
 }
 
 #gallery-section{
@@ -192,6 +200,18 @@ body {
     }
     .fp-arrow {
         padding-left:100px;
+    }
+    @media only screen and (max-width: 800px) {
+        /* For mobile phones: */
+        .fp-arrow{
+            padding-left:50px;
+        }
+    }
+    @media only screen and (max-width: 650px) {
+        /* For mobile phones: */
+        .fp-arrow{
+            margin-top:200px;
+        }
     }
 }
 #bio-slide{
@@ -224,9 +244,9 @@ body {
 
 #repertoire-section{
     display:block;
-    margin-top:30px;
+    margin:20px;
     height:100%;
-    width:100%;
+    width:auto;
     padding:0;
     .accordion{
         background-color: #444;
@@ -248,12 +268,20 @@ body {
         background-color: #363537;
         display: none;
         overflow: hidden;
+        margin:0;
         ul{
             columns:2;
+            padding-left:0;
             -webkit-columns: 2;
             -moz-columns: 2;
-            column-gap: 0;
+            column-gap:10px;
             width:100%;
+        }
+        @media only screen and (max-width: 800px) {
+            /* For mobile phones: */
+            ul{
+                columns:1;
+            }
         }
         li{
             text-align:left;
@@ -271,8 +299,25 @@ body {
                 color: #06F;
             }
         }
+    }   
+    #audition-works ul{
+        columns:3; 
+        font-size:90%;
+    }
+    @media only screen and (max-width: 900px) {
+        /* For mobile phones: */
+        #audition-works ul{
+            columns:2;
+        }
+    }
+    @media only screen and (max-width: 650px) {
+        /* For mobile phones: */
+        #audition-works ul{
+            columns:1;
+        }
     }
 }
+
 
 #fp-nav ul li a span, 
 .fp-slidesNav ul li a span{

@@ -225,13 +225,25 @@ body {
   transition: color 0.3s linear;
 }
 
-#media-section #media-wrapper #media-nav button:nth-of-type(2n) {
+#media-section #media-wrapper #media-nav button:nth-of-type(2n-1) {
   background: #FBFCFF;
 }
 
 #media-section #media-wrapper #media-nav button:hover {
   color: #06F;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  #media-section {
+    /* For mobile phones: */
+  }
+  #media-section #media-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #gallery-section img {
@@ -245,6 +257,24 @@ body {
 
 #gallery-section .fp-arrow {
   padding-left: 100px;
+}
+
+@media only screen and (max-width: 800px) {
+  #gallery-section {
+    /* For mobile phones: */
+  }
+  #gallery-section .fp-arrow {
+    padding-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #gallery-section {
+    /* For mobile phones: */
+  }
+  #gallery-section .fp-arrow {
+    margin-top: 200px;
+  }
 }
 
 #bio-slide {
@@ -279,9 +309,9 @@ body {
 
 #repertoire-section {
   display: block;
-  margin-top: 30px;
+  margin: 20px;
   height: 100%;
-  width: 100%;
+  width: auto;
   padding: 0;
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 }
@@ -308,15 +338,27 @@ body {
   background-color: #363537;
   display: none;
   overflow: hidden;
+  margin: 0;
 }
 
 #repertoire-section .repertoire-list ul {
   columns: 2;
+  padding-left: 0;
   -webkit-columns: 2;
   -moz-columns: 2;
-  -webkit-column-gap: 0;
-          column-gap: 0;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
   width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  #repertoire-section .repertoire-list {
+    /* For mobile phones: */
+  }
+  #repertoire-section .repertoire-list ul {
+    -webkit-columns: 1;
+            columns: 1;
+  }
 }
 
 #repertoire-section .repertoire-list li {
@@ -333,6 +375,32 @@ body {
 
 #repertoire-section .repertoire-list li a:hover {
   color: #06F;
+}
+
+#repertoire-section #audition-works ul {
+  -webkit-columns: 3;
+          columns: 3;
+  font-size: 90%;
+}
+
+@media only screen and (max-width: 900px) {
+  #repertoire-section {
+    /* For mobile phones: */
+  }
+  #repertoire-section #audition-works ul {
+    -webkit-columns: 2;
+            columns: 2;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #repertoire-section {
+    /* For mobile phones: */
+  }
+  #repertoire-section #audition-works ul {
+    -webkit-columns: 1;
+            columns: 1;
+  }
 }
 
 #fp-nav ul li a span,
