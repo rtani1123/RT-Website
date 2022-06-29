@@ -88,12 +88,7 @@ body {
             background-attachment: fixed;
             animation: image-from-right 3s 1;
         }
-        @media only screen and (max-width: 884px) {
-            #about-photo{
-                max-width:100%;
-            }
-        }
-        @media only screen and (max-width: 650px) {
+        @media only screen and (max-width: 820px) {
             /* For mobile phones: */
             #about-photo{
                 padding-left:0;
@@ -203,8 +198,6 @@ body {
         #media-wrapper{
             display:block;
             width:100%;
-        }
-        #media-video{
         }
         #media-nav{
             font-size:16px;

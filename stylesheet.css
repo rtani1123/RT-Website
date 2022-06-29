@@ -111,13 +111,7 @@ body {
           animation: image-from-right 3s 1;
 }
 
-@media only screen and (max-width: 884px) {
-  #mainpage-section #about-section #about-photo {
-    max-width: 100%;
-  }
-}
-
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 820px) {
   #mainpage-section #about-section {
     /* For mobile phones: */
   }
