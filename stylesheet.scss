@@ -273,6 +273,7 @@ body {
     width:auto;
     padding:0;
     overflow:scroll;
+    -webkit-overflow-scrolling: touch;
     .accordion{
         background-color: #444;
         color: #ccc;
