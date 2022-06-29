@@ -131,17 +131,21 @@ body {
         display:flex;
         flex-direction:row;
         width:80%;
-        height:74%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         #media-video {
+            position:relative;
             background-color:black;
             width:100%;
-            height:100%;
+            height:0;
+            padding-top: 56.25%;
             flex: 3;
             iframe{
+                position: absolute;
+                top: 0;
+                left: 0;
                 width:100%;
                 height:100%;
             }
@@ -153,14 +157,14 @@ body {
                 color:black;
                 text-align: center;
                 margin-left:5px;
-                font-size:calc(min(2vw,16px));
+                font-size:calc(min(1.6vw,16px));
                 font-weight:700;
             }
             button{
                 width:100%;
                 text-align:center;
                 font-size:100%;
-                font-size:calc(min(2vw,16px));
+                font-size:calc(min(1.5vw,16px));
                 font-family:'Montserrat';
                 border:none;
                 background:none;
@@ -179,12 +183,32 @@ body {
                 cursor:pointer;
             }
         }
-        
+        @media only screen and (max-width: 800px) {
+            /* For mobile phones: */
+            #media-nav {
+                p{
+                    font-size:14px;
+                    margin-bottom:0;
+                    vertical-align: middle;
+                }
+                button{
+                    font-size:12px;
+                    height:100%;
+                }
+            }
+        }
     }
     @media only screen and (max-width: 800px) {
         /* For mobile phones: */
         #media-wrapper{
-            flex-direction:column;
+            display:block;
+            width:100%;
+        }
+        #media-video{
+        }
+        #media-nav{
+            font-size:16px;
+            height:100%;
         }
     }
     

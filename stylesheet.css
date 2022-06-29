@@ -175,7 +175,6 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 80%;
-  height: 74%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -184,15 +183,20 @@ body {
 }
 
 #media-section #media-wrapper #media-video {
+  position: relative;
   background-color: black;
   width: 100%;
-  height: 100%;
+  height: 0;
+  padding-top: 56.25%;
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
 }
 
 #media-section #media-wrapper #media-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -208,7 +212,7 @@ body {
   color: black;
   text-align: center;
   margin-left: 5px;
-  font-size: calc(min(2vw,16px));
+  font-size: calc(min(1.6vw,16px));
   font-weight: 700;
 }
 
@@ -216,7 +220,7 @@ body {
   width: 100%;
   text-align: center;
   font-size: 100%;
-  font-size: calc(min(2vw,16px));
+  font-size: calc(min(1.5vw,16px));
   font-family: 'Montserrat';
   border: none;
   background: none;
@@ -235,14 +239,31 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
+  #media-section #media-wrapper {
+    /* For mobile phones: */
+  }
+  #media-section #media-wrapper #media-nav p {
+    font-size: 14px;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  #media-section #media-wrapper #media-nav button {
+    font-size: 12px;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
   #media-section {
     /* For mobile phones: */
   }
   #media-section #media-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: block;
+    width: 100%;
+  }
+  #media-section #media-nav {
+    font-size: 16px;
+    height: 100%;
   }
 }
 
