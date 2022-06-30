@@ -1,10 +1,10 @@
 <?php
 
 if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $subject = $_POST['subject'];
-    $mailFrom = $_POST['mail'];
-    $message = $_POST['message'];
+    $name = $_POST['sender-name'];
+    $subject = 'Email from: ' + $name;
+    $mailFrom = $_POST['sender-email'];
+    $message = $_POST['sender-message'];
 
     $mailTo = "ryanytani@gmail.com";
     $headers = 'From: ' . $mailFrom . "\r\n" .

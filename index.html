@@ -22,11 +22,12 @@
     <div class="section" id="mainpage-section">
       <div class="slide">
         <div class="nav">
-          <div class="nav-item"><a href="#home/1">bio</a></div>
-          <div class="nav-item"><a href="#video">video</a></div>
-          <div class="nav-item"><a href="#photo-gallery">gallery</a></div>
-          <div class="nav-item"><a href="#repertoire-page">repertoire</a></div>
+          <div class="nav-item"><a href="#home-section/1">bio</a></div>
           <div class="nav-item"><a src="resources/resume-042722.pdf" data-lity>resume</a></div>
+          <div class="nav-item"><a href="#video-section">video</a></div>
+          <div class="nav-item"><a href="#photo-gallery-section">gallery</a></div>
+          <div class="nav-item"><a href="#repertoire-section">repertoire</a></div>
+          <div class="nav-item"><a href="#contact-form-section">contact</a></div>
         </div>
 
         <!--This content below is the ABOUT section-->
@@ -34,13 +35,14 @@
           <div id="about-name">
             ryan tani, conductor
           </div>
+          <div id="about-subname">( and sometimes web developer/programmer )</div>
           <img src="images/headshot2.jpg" id="about-photo"></img>
         </div>
       </div>
       <div class="slide">
         <div id="bio-slide">
           <div id="bio-nav">
-            <p><a href="#home/0">Back to HOME</a></p>
+            <p><a href="#home-section/0">Back to HOME</a></p>
           </div>
           <div id="bio-photo">
             <img src="images/bio_pic.jpeg"></img>
@@ -353,57 +355,83 @@
           </ul>
         </div>
       </div>
+    </div>
 
-      <script src=" https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"
-        integrity="sha512-JSVRnP8UFs0ieN/cvP9v4vmW1CotIaEKKN7W+4JaKNrllZolTv2aJfVGn4BFdfZ1jRZxgTAAaXWdlZbEm9iwFA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-        </script>
+    <!--This content below is the CONTACT FORM-->
+    <div class="section">
+      <div id="contact-form-wrapper">
+        <div id="contact-form-content">
+          <div id="contact-form-title">
+            <div id="contact-form-title-content">
+              <h1>Say Hi!</h1><br>
+              <p>or email me at <a href="mailto:ryanytani@gmail.com">ryanytani@gmail.com</a></p>
+            </div>
+          </div>
+          <div id="contact-form">
+            <form action="contactform.php" method="POST">
+              <label for="sender-name">Name *</label>
+              <input class="contact-form-input" type="text" name="sender-name" placeholder="Your Name...">
+              <label for="sender-email">Email *</label>
+              <input class="contact-form-input" type="text" name="sender-email" placeholder="Your Email...">
+              <label for="sender-message">Message *</label>
+              <textarea class="contact-form-input" name="sender-message" placeholder="Your Message..."></textarea>
+              <button class="contact-form-input">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"
+    integrity="sha512-JSVRnP8UFs0ieN/cvP9v4vmW1CotIaEKKN7W+4JaKNrllZolTv2aJfVGn4BFdfZ1jRZxgTAAaXWdlZbEm9iwFA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
 
-      <script>
-        //fullpage.js initialization for the id 'home-wrapper' at the top
-        new fullpage('#home-wrapper', {
-          autoScrolling: true,
-          anchors: ['home', 'video', 'photo-gallery', 'repertoire-page'],
-          navigationTooltips: ['Home', 'Video', 'Gallery', 'Repertoire'],
-          navigation: true,
-          navigationPosition: 'right',
-        })
+  <script>
+    //fullpage.js initialization for the id 'home-wrapper' at the top
+    new fullpage('#home-wrapper', {
+      autoScrolling: true,
+      anchors: ['home-section', 'video-section', 'photo-gallery-section', 'repertoire-section', 'contact-form-section'],
+      navigationTooltips: ['Home', 'Video', 'Gallery', 'Repertoire', 'Contact Form'],
+      navigation: true,
+      navigationPosition: 'right',
+    })
 
-        //initialize YouTube player with JS API
-        var player, seconds = 0;
-        function onYouTubeIframeAPIReady() {
-          console.log("player");
-          player = new YT.Player('player', {});
+    //initialize YouTube player with JS API
+    var player, seconds = 0;
+    function onYouTubeIframeAPIReady() {
+      console.log("player");
+      player = new YT.Player('player', {});
+    }
+
+    //create function to seek to timestamp
+    function seek(sec) {
+      if (player) {
+        player.seekTo(sec, true);
+        player.playVideo();
+      }
+    }
+
+    //code for repertoire page accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
         }
-
-        //create function to seek to timestamp
-        function seek(sec) {
-          if (player) {
-            player.seekTo(sec, true);
-            player.playVideo();
-          }
-        }
-
-        //code for repertoire page accordion
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-          acc[i].addEventListener("click", function () {
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            this.classList.toggle("active");
-
-            /* Toggle between hiding and showing the active panel */
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-              panel.style.display = "none";
-            } else {
-              panel.style.display = "block";
-            }
-          });
-        }
-      </script>
+      });
+    }
+  </script>
 </body>
 
 </html>
