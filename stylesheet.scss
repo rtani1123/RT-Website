@@ -10,6 +10,7 @@ body {
     color: #D0CCD0;
 }
 
+/* Add a fixed 'home' nav for all sub-pages */
 #home-link{
     font-size:20px;
     color:white;
@@ -21,6 +22,7 @@ body {
     padding:20px;
     z-index:9;
 }
+
 /* Styles for mainpage (including nav bar, about, and bio slides) */
 #mainpage-section{
     .fp-arrow {
@@ -372,6 +374,7 @@ body {
 
 /* Styles for contact form page (5th page on fullpage.js) */
 #contact-form-wrapper{
+    margin:20px;
     #contact-form-content{
         width: 60%;
         display:flex;
@@ -380,12 +383,12 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
         #contact-form-title{
             flex:1;
             position:relative;
             width:100%;
             display:table;
+            margin:20px;
             #contact-form-title-content{
                 display:table-cell;
                 margin:0;
@@ -425,12 +428,12 @@ body {
             }
         }
         #contact-form-container{
+            width:100%;
             background-color:grey;
             flex:1;
             padding:20px;
-            border-radius:25px;
+            border-radius:5px;
             color:black;
-            margin-bottom:5px;
             input, label, textarea, button{
                 width:100%;
                 height:40px;
@@ -486,16 +489,14 @@ body {
         #contact-form-content{
             display:block;
             position:relative;
-            width:100%;
+            width:90%;
+            margin:0;
             top:0%;
             left:0%;
             transform:none;
         }      
         #contact-form-title{
             margin-bottom:20px;
-        }
-        #contact-form-container{
-            width:100%;
         }
     }
 }

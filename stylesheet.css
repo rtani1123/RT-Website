@@ -10,6 +10,7 @@ body {
   color: #D0CCD0;
 }
 
+/* Add a fixed 'home' nav for all sub-pages */
 #home-link {
   font-size: 20px;
   color: white;
@@ -467,6 +468,10 @@ body {
 }
 
 /* Styles for contact form page (5th page on fullpage.js) */
+#contact-form-wrapper {
+  margin: 20px;
+}
+
 #contact-form-wrapper #contact-form-content {
   width: 60%;
   display: -webkit-box;
@@ -490,6 +495,7 @@ body {
   position: relative;
   width: 100%;
   display: table;
+  margin: 20px;
   -webkit-animation: contact-form-title-animation 3s 1;
           animation: contact-form-title-animation 3s 1;
 }
@@ -544,14 +550,14 @@ body {
 }
 
 #contact-form-wrapper #contact-form-content #contact-form-container {
+  width: 100%;
   background-color: grey;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding: 20px;
-  border-radius: 25px;
+  border-radius: 5px;
   color: black;
-  margin-bottom: 5px;
   -webkit-animation: contact-form-visibility-animation 5s 1;
           animation: contact-form-visibility-animation 5s 1;
 }
@@ -640,7 +646,8 @@ body {
   #contact-form-wrapper #contact-form-content {
     display: block;
     position: relative;
-    width: 100%;
+    width: 90%;
+    margin: 0;
     top: 0%;
     left: 0%;
     -webkit-transform: none;
@@ -648,9 +655,6 @@ body {
   }
   #contact-form-wrapper #contact-form-title {
     margin-bottom: 20px;
-  }
-  #contact-form-wrapper #contact-form-container {
-    width: 100%;
   }
 }
 
