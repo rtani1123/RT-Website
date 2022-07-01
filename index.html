@@ -395,7 +395,11 @@
       anchors: ['home', 'video', 'gallery', 'repertoire', 'contact'],
       navigationTooltips: ['Home', 'Video', 'Gallery', 'Repertoire', 'Contact Form'],
       navigation: true,
-      navigationPosition: 'right'
+      navigationPosition: 'right',
+      responsiveWidth: 900,
+      afterResponsive: function (isResponsive) {
+
+      }
     })
 
     //initialize YouTube player with JS API
