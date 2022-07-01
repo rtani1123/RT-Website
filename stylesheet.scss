@@ -20,14 +20,23 @@ body {
 /* Add a fixed 'home' nav for all sub-pages */
 #home-link{
     font-size:20px;
-    color:white;
     position:fixed;
     top:20px;
     left:30px;
     background-color:#363537;
     border-radius:5px;
     padding:20px;
-    z-index:9;
+    z-index:10000;
+    color: #D0CCD0;
+    text-decoration: none;
+    -webkit-transition: color 0.5s linear;
+    -moz-transition: color 0.5s linear;
+    -ms-transition: color 0.5s linear;
+    -o-transition: color 0.5s linear;
+    transition: color 0.5s linear;
+}
+#home-link:hover{
+    color: #06F;
 }
 
 /* Styles for mainpage (including nav bar, about, and bio slides) */
