@@ -254,7 +254,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 70%;
+  width: 75%;
 }
 
 #media-section-wrapper #media-wrapper #media-video {
@@ -263,6 +263,7 @@ body {
   width: 100%;
   height: 0;
   padding-top: 56.25%;
+  margin-right: 20px;
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
