@@ -214,7 +214,7 @@ body {
 }
 
 #bio-section #bio-text {
-  font-size: calc(min((12px + 1vw),14px));
+  font-size: calc(max(1vw, 10px));
 }
 
 #bio-section #resume {
