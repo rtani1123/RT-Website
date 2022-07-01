@@ -10,6 +10,13 @@ body {
     color: #D0CCD0;
 }
 
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* Add a fixed 'home' nav for all sub-pages */
 #home-link{
     font-size:20px;
@@ -185,10 +192,6 @@ body {
         display:flex;
         flex-direction:row;
         width:80%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         #media-video {
             position:relative;
             background-color:black;
@@ -378,10 +381,6 @@ body {
         width: 60%;
         display:flex;
         flex-direction:row;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         #contact-form-title{
             flex:1;
             position:relative;
@@ -496,6 +495,28 @@ body {
         }      
         #contact-form-title{
             margin-bottom:20px;
+        }
+    }
+}
+
+#thank-you-wrapper{
+    text-align:center;
+    #confirmation-message{
+        border: solid white 2px;
+        font-size:14px;
+    }
+    h2{
+        a{
+            color:#ccc;
+            text-decoration: none;
+            -webkit-transition: color 0.5s linear;
+            -moz-transition: color 0.5s linear;
+            -ms-transition: color 0.5s linear;
+            -o-transition: color 0.5s linear;
+            transition: color 0.5s linear;
+        }
+        a:hover{
+            color:#06F;
         }
     }
 }

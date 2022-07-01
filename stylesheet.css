@@ -10,6 +10,14 @@ body {
   color: #D0CCD0;
 }
 
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 /* Add a fixed 'home' nav for all sub-pages */
 #home-link {
   font-size: 20px;
@@ -240,11 +248,6 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 #media-section-wrapper #media-wrapper #media-video {
@@ -476,11 +479,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 #contact-form-wrapper #contact-form-content #contact-form-title {
@@ -651,6 +649,26 @@ body {
   #contact-form-wrapper #contact-form-title {
     margin-bottom: 20px;
   }
+}
+
+#thank-you-wrapper {
+  text-align: center;
+}
+
+#thank-you-wrapper #confirmation-message {
+  border: solid white 2px;
+  font-size: 14px;
+}
+
+#thank-you-wrapper h2 a {
+  color: #ccc;
+  text-decoration: none;
+  -webkit-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+}
+
+#thank-you-wrapper h2 a:hover {
+  color: #06F;
 }
 
 /* fullpage.js - navigation bar on the right - set dots as white */
