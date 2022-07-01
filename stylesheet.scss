@@ -127,7 +127,7 @@ body {
         }
         #about-photo{
             display:block;
-            height:100vh;
+            height:90vh;
             margin-left:auto;
             padding-left:25vw;
             margin-right:auto;
@@ -195,11 +195,11 @@ body {
 
 /* Styles for media page (2nd page on fullpage.js) */
 #media-section-wrapper{
-    max-height:95%;
+    max-height:60%;
     #media-wrapper{
         display:flex;
         flex-direction:row;
-        width:80%;
+        width:70%;
         #media-video {
             position:relative;
             background-color:black;
@@ -250,7 +250,14 @@ body {
         }
         @media only screen and (max-width: 800px) {
             /* For mobile phones: */
+            #media-video{
+                margin-left:20px;
+                margin-right:20px;
+                width:auto;
+            }
             #media-nav {
+                margin-left:20px;
+                margin-right:20px;
                 p{
                     font-size:14px;
                     margin-bottom:0;
@@ -291,6 +298,10 @@ body {
     }
     @media only screen and (max-width: 800px) {
         /* For mobile phones: */
+        margin-top:0;
+        .slide{
+            margin:0;
+        }
         .fp-arrow{
             padding-left:50px;
         }

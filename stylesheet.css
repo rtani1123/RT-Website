@@ -162,7 +162,7 @@ body {
 
 #mainpage-section #about-wrapper #about-photo {
   display: block;
-  height: 100vh;
+  height: 90vh;
   margin-left: auto;
   padding-left: 25vw;
   margin-right: auto;
@@ -243,7 +243,7 @@ body {
 
 /* Styles for media page (2nd page on fullpage.js) */
 #media-section-wrapper {
-  max-height: 95%;
+  max-height: 60%;
 }
 
 #media-section-wrapper #media-wrapper {
@@ -254,7 +254,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 80%;
+  width: 70%;
 }
 
 #media-section-wrapper #media-wrapper #media-video {
@@ -317,6 +317,15 @@ body {
   #media-section-wrapper #media-wrapper {
     /* For mobile phones: */
   }
+  #media-section-wrapper #media-wrapper #media-video {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+  }
+  #media-section-wrapper #media-wrapper #media-nav {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   #media-section-wrapper #media-wrapper #media-nav p {
     font-size: 14px;
     margin-bottom: 0;
@@ -359,6 +368,10 @@ body {
 @media only screen and (max-width: 800px) {
   #gallery-wrapper {
     /* For mobile phones: */
+    margin-top: 0;
+  }
+  #gallery-wrapper .slide {
+    margin: 0;
   }
   #gallery-wrapper .fp-arrow {
     padding-left: 50px;
