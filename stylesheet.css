@@ -50,6 +50,8 @@ body {
   border-radius: 5px;
   padding: 10px;
   z-index: 2;
+  -webkit-animation: fade-in 5s 1;
+          animation: fade-in 5s 1;
 }
 
 #mainpage-section .nav .nav-item {
@@ -58,12 +60,10 @@ body {
 }
 
 #mainpage-section .nav .nav-item a {
-  color: #ccc;
+  color: #D0CCD0;
   text-decoration: none;
   -webkit-transition: color 0.5s linear;
   transition: color 0.5s linear;
-  -webkit-animation: fade-in 5s 1;
-          animation: fade-in 5s 1;
 }
 
 #mainpage-section .nav .nav-item a:hover {

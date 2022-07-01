@@ -49,28 +49,27 @@ body {
             cursor: pointer;
             font-size:24px;
             a{
-                color: #ccc;
+                color: #D0CCD0;
                 text-decoration: none;
                 -webkit-transition: color 0.5s linear;
                 -moz-transition: color 0.5s linear;
                 -ms-transition: color 0.5s linear;
                 -o-transition: color 0.5s linear;
                 transition: color 0.5s linear;
-                animation: fade-in 5s 1;
             }
             a:hover{
                 color: #06F;
             }
-            @keyframes fade-in {
-                0%{
-                    opacity:0%;
-                }
-                50%{
-                    opacity:0%;
-                }
+        }
+        animation: fade-in 5s 1;
+        @keyframes fade-in {
+            0%{
+                opacity:0%;
+            }
+            50%{
+                opacity:0%;
             }
         }
-        
     }
     @media only screen and (min-width: 1100px) {
         /* For mobile phones: */
