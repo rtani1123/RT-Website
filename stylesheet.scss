@@ -49,17 +49,17 @@ body {
                 -ms-transition: color 0.5s linear;
                 -o-transition: color 0.5s linear;
                 transition: color 0.5s linear;
-                animation: nav-animation 5s 1;
+                animation: fade-in 5s 1;
             }
             a:hover{
                 color: #06F;
             }
-            @keyframes nav-animation {
+            @keyframes fade-in {
                 0%{
-                    color:#363537;
+                    opacity:0%;
                 }
                 50%{
-                    color:#363537;
+                    opacity:0%;
                 }
             }
         }
@@ -81,7 +81,7 @@ body {
     #about-wrapper{
         background-size:cover;
         z-index:1;
-        #about-name{
+        #about-name-wrapper{
             background-color: #363537;
             border-radius:5px;
             z-index: 1000;
@@ -89,33 +89,25 @@ body {
             position:absolute;
             top:70%;
             left:7%;
-            letter-spacing: 8px;
-            font-size:36px;
-            font-weight:700;
-            padding:5px;
-            animation: text-from-left 3s 1;
-        }
-        #about-subname{
-            background-color: #363537;
-            border-radius:5px;
-            z-index: 1000;
-            text-align:center;
-            position:absolute;
-            top:80%;
-            left:7%;
-            letter-spacing: 4px;
-            font-size:12px;
-            font-weight:700;
-            padding:5px;
-            animation: nav-animation 10s 1;
+            #about-name{
+                letter-spacing: 8px;
+                font-size:36px;
+                font-weight:700;
+                padding:5px;
+                animation: text-from-left 2s 1;
+            }
+            #about-subname{
+                letter-spacing: 4px;
+                font-size:12px;
+                font-weight:700;
+                padding:5px;
+                animation: fade-in 4s 1;
+            }
         }
         @keyframes text-from-left {
             0%{
-                color: black;
-                left:-100vw;
-            }
-            30%{
-                letter-spacing:0px;
+                color:pink;
+                margin-left:-100vw;
             }
         }
         #about-photo{
@@ -151,9 +143,14 @@ body {
                 overflow:hidden;
                 background-attachment: fixed;
             }
-            #about-name{
-                letter-spacing:0px;
-                font-size:24px;
+            #about-name-wrapper{
+                #about-name{
+                    letter-spacing:0px;
+                    font-size:24px;
+                }
+                #about-subname{
+                    letter-spacing:0px;
+                }
             }
         }
     }
