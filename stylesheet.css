@@ -139,14 +139,12 @@ body {
 
 @-webkit-keyframes text-from-left {
   0% {
-    color: pink;
     margin-left: -100vw;
   }
 }
 
 @keyframes text-from-left {
   0% {
-    color: pink;
     margin-left: -100vw;
   }
 }
