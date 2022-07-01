@@ -48,7 +48,7 @@ body {
     .nav{
         position:absolute;
         top:30%;
-        left:10%;
+        left:20%;
         background:#363537;
         border:#363537;
         border-radius:5px;
@@ -97,7 +97,7 @@ body {
             text-align:center;
             position:absolute;
             top:70%;
-            left:10%;
+            left:20%;
             #about-name{
                 letter-spacing: 8px;
                 font-size:36px;
@@ -154,31 +154,46 @@ body {
             }
         }
     }
-    #contact-form{
-        p{
-            background:white !important;
-            border:5px !important;
-            padding:10px !important;
+}
+
+/* Styles for the bio page (2nd page on fullpage.js) */
+#bio-section{
+    margin:50px;
+    color:#363537;
+    #bio-photo {
+        padding-right:15px;
+        float:left;
+        width: 50%;
+        img{
+            max-width:100%;
         }
     }
-    #bio-slide{
-        margin:50px;
-
-        #bio-photo {
-            padding-right:15px;
-            float:left;
-            width: 50%;
-            img{
-                max-width:100%;
-            }
-        }
-        #bio-text{
-            text-align: justify;
-        }
+    #bio-text{
+        font-size: calc(min((12px + 1vw),14px));
+    }
+    #resume{
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+        background-color:#363537;
+        border-radius:5px;
+        padding:20px;
+        color: #D0CCD0;
+        text-decoration: none;
+        -webkit-transition: color 0.5s linear;
+        -moz-transition: color 0.5s linear;
+        -ms-transition: color 0.5s linear;
+        -o-transition: color 0.5s linear;
+        transition: color 0.5s linear;
+        
+    }
+    #resume:hover{
+        cursor:pointer;
+        color: #06F;
     }
 }
 
-/* Styles for media page (2nd page on fullpage.js) */
+/* Styles for media page (3rd page on fullpage.js) */
 #media-section-wrapper{
     max-height:60%;
     #media-wrapper{
@@ -270,7 +285,7 @@ body {
     
 }
 
-/* Styles for gallery page (3rd page on fullpage.js) */
+/* Styles for gallery page (4th page on fullpage.js) */
 #gallery-wrapper{
     img{
         height:80%;
@@ -300,7 +315,7 @@ body {
     }
 }
 
-/* Styles for repertoire page (4th page on fullpage.js) */
+/* Styles for repertoire page (5th page on fullpage.js) */
 #repertoire-wrapper{
     display:block;
     margin:20px;
@@ -379,7 +394,7 @@ body {
     }
 }
 
-/* Styles for contact form page (5th page on fullpage.js) */
+/* Styles for contact form page (6th page on fullpage.js) */
 #contact-form-wrapper{
     margin:20px;
     #contact-form-content{
@@ -392,6 +407,7 @@ body {
             width:100%;
             display:table;
             margin:20px;
+            color:#363537;
             #contact-form-title-content{
                 display:table-cell;
                 margin:0;
