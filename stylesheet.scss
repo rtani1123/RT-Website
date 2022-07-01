@@ -10,6 +10,17 @@ body {
     color: #D0CCD0;
 }
 
+#home-link{
+    font-size:20px;
+    color:white;
+    position:fixed;
+    top:20px;
+    left:30px;
+    background-color:#363537;
+    border-radius:5px;
+    padding:20px;
+    z-index:9;
+}
 /* Styles for mainpage (including nav bar, about, and bio slides) */
 #mainpage-section{
     .fp-arrow {
@@ -65,7 +76,7 @@ body {
         }
     }
     
-    #about-section{
+    #about-wrapper{
         background-size:cover;
         z-index:1;
         #about-name{
@@ -151,25 +162,13 @@ body {
     }
     #bio-slide{
         margin:50px;
-        #bio-nav a{
-            color:#ccc;
-            text-decoration: none;
-            -webkit-transition: color 0.3s linear;
-            -moz-transition: color 0.3s linear;
-            -ms-transition: color 0.3s linear;
-            -o-transition: color 0.3s linear;
-            transition: color 0.3s linear;
-        }
-        #bio-nav a:hover{
-            color: #06F;
-            cursor:pointer;
-        }
+
         #bio-photo {
             padding-right:15px;
             float:left;
             width: 50%;
             img{
-                width:100%;
+                max-width:100%;
             }
         }
         #bio-text{
@@ -179,7 +178,7 @@ body {
 }
 
 /* Styles for media page (2nd page on fullpage.js) */
-#media-section{
+#media-section-wrapper{
     max-height:95%;
     #media-wrapper{
         display:flex;
@@ -267,7 +266,7 @@ body {
 }
 
 /* Styles for gallery page (3rd page on fullpage.js) */
-#gallery-section{
+#gallery-wrapper{
     img{
         height:80%;
         margin-top:10vh;
@@ -293,7 +292,7 @@ body {
 }
 
 /* Styles for repertoire page (4th page on fullpage.js) */
-#repertoire-section{
+#repertoire-wrapper{
     display:block;
     margin:20px;
     height:100%;
@@ -425,7 +424,7 @@ body {
                 }
             }
         }
-        #contact-form{
+        #contact-form-container{
             background-color:grey;
             flex:1;
             padding:20px;
@@ -495,7 +494,7 @@ body {
         #contact-form-title{
             margin-bottom:20px;
         }
-        #content-form{
+        #contact-form-container{
             width:100%;
         }
     }

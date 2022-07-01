@@ -14,9 +14,11 @@
   <link href="scripts/lity-2.4.1/dist/lity.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="scripts/lity-2.4.1/dist/lity.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 </head>
 
 <body>
+  <div><a href="#home-section/0" id="home-link">Home</a></div>
   <div id="home-wrapper">
     <!--This section below is the HOME page and NAV-->
     <div class="section" id="mainpage-section">
@@ -31,7 +33,7 @@
         </div>
 
         <!--This content below is the ABOUT section-->
-        <div id="about-section">
+        <div id="about-wrapper">
           <div id="about-name">
             ryan tani, conductor
           </div>
@@ -41,14 +43,12 @@
       </div>
       <div class="slide">
         <div id="bio-slide">
-          <div id="bio-nav">
-            <p><a href="#home-section/0">Back to HOME</a></p>
-          </div>
           <div id="bio-photo">
             <img src="images/bio_pic.jpeg"></img>
           </div>
           <div id="bio-text">
-            <p>Conductor RYAN TANI recently completed his two-year tenure as the Orchestral Conducting Fellow for the
+            <p style="margin-top:0;">Conductor RYAN TANI recently completed his two-year tenure as the Orchestral
+              Conducting Fellow for the
               Yale
               Philharmonia under Music Director Peter Oundjian, where he was the 2021 recipient of the Dean's Prize for
               artistic excellence in his graduating class. Ryan recently concluded his tenure as Music Director of the
@@ -91,7 +91,7 @@
 
     <!--This section below is MEDIA-->
     <div class="section">
-      <div id="media-section">
+      <div id="media-section-wrapper">
         <div id="media-wrapper">
           <div id="media-video">
             <iframe id="player" src="https://www.youtube.com/embed/PvTXdejUDCg?rel=0&enablejsapi=1"
@@ -118,7 +118,7 @@
 
     <!--This content below is the GALLERY-->
     <div class="section">
-      <div id="gallery-section">
+      <div id="gallery-wrapper">
         <img class="slide" src="images/collage1.jpg">
         <img class="slide" src="images/collage2.jpg">
         <img class="slide" src="images/contact-bg.jpg">
@@ -131,7 +131,7 @@
 
     <!--This content below is the REPERTOIRE-->
     <div class="section">
-      <div id="repertoire-section">
+      <div id="repertoire-wrapper">
         <button class="accordion">Premieres</button>
         <div class="repertoire-list">
           <ul>
@@ -367,15 +367,15 @@
               <p>or email me at <a href="mailto:ryanytani@gmail.com">ryanytani@gmail.com</a></p>
             </div>
           </div>
-          <div id="contact-form">
-            <form action="contactform.php" method="POST">
+          <div id="contact-form-container">
+            <form id="contact-form" action="contactform.php" method="POST">
               <label for="sender-name">Name *</label>
               <input class="contact-form-input" type="text" name="sender-name" placeholder="Your Name...">
               <label for="sender-email">Email *</label>
               <input class="contact-form-input" type="text" name="sender-email" placeholder="Your Email...">
               <label for="sender-message">Message *</label>
               <textarea class="contact-form-input" name="sender-message" placeholder="Your Message..."></textarea>
-              <button class="contact-form-input">Send</button>
+              <button class="contact-form-input" type="submit">Send</button>
             </form>
           </div>
         </div>
@@ -390,7 +390,6 @@
   <script>
     //fullpage.js initialization for the id 'home-wrapper' at the top
     new fullpage('#home-wrapper', {
-      autoScrolling: true,
       anchors: ['home-section', 'video-section', 'photo-gallery-section', 'repertoire-section', 'contact-form-section'],
       navigationTooltips: ['Home', 'Video', 'Gallery', 'Repertoire', 'Contact Form'],
       navigation: true,
@@ -431,6 +430,43 @@
         }
       });
     }
+
+    //validate contact form
+    const constraints = {
+      name: {
+        presence: { allowEmpty: false }
+      },
+      email: {
+        presence: { allowEmpty: false },
+        email: true
+      },
+      message: {
+        presence: { allowEmpty: false }
+      }
+    };
+
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function (event) {
+      const formValues = {
+        name: form.elements.name.value,
+        email: form.elements.email.value,
+        message: form.elements.message.value
+      };
+
+      const errors = validate(formValues, constraints);
+
+      if (errors) {
+        event.preventDefault();
+        const errorMessage = Object
+          .values(errors)
+          .map(function (fieldValues) { return fieldValues.join(', ') })
+          .join("\n");
+
+        alert(errorMessage);
+      }
+    }, false);
+
   </script>
 </body>
 
