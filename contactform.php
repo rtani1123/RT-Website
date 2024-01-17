@@ -17,22 +17,25 @@
     $allValid = true;
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST["name"])) {
+        if (!empty($_POST['website'])) die(); //spam protection
+        if (!empty($_POST['email'])) die(); //spam protection
+
+        if (empty($_POST["name-nospam"])) {
             $nameErr = "Name is required";
             $allValid = false;
         } else {
-            $name = test_input($_POST["name"]);
+            $name = test_input($_POST["name-nospam"]);
             // check if name only contains letters and whitespace
             if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
                 $nameErr = "Only letters and white space allowed";
                 $allValid = false;
             }
         }
-        if (empty($_POST["email"])) {
+        if (empty($_POST["email-nospam"])) {
             $emailErr = "Email is required";
             $allValid = false;
         } else {
-            $email = test_input($_POST["email"]);
+            $email = test_input($_POST["email-nospam"]);
             // check if e-mail address is well-formed
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $emailErr = "Invalid email format";
@@ -41,11 +44,11 @@
             $headers = "From: ryan@ryanytani.com";
         }
 
-        if (empty($_POST["message"])) {
+        if (empty($_POST["message-nospam"])) {
             $message = "";
             $allValid = false;
         } else {
-            $message = test_input($_POST["message"]);
+            $message = test_input($_POST["message-nospam"]);
         }
         if ($allValid) :
             mail("ryanytani@gmail.com", "Message from " . $name . " at " . $email, $message, $headers);
